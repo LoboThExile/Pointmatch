@@ -13,6 +13,9 @@ tellraw @a "Resetting some scores..."
 scoreboard objectives remove PM_welcome_clear 
 scoreboard objectives add PM_welcome_clear dummy
 scoreboard players set #PM_welcome PM_welcome_clear 0
+tellraw @a "Scores have been reset."
+tellraw @a "Adding some scores.."
+scoreboard objectives add PM_Deaths deathCount
 # Check if scoreboard "Points exists", if not create it
 tellraw @a "Checking for existing 'Points' scoreboard..."
 scoreboard objectives add PM_Points dummy {"text":"Points","color":"gold"}

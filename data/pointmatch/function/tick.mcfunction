@@ -1,0 +1,1 @@
+execute as @a[scores={PM_Deaths=1..}, team=PM_Alpha] run tellraw @a [{"text":"Team Alpha Died..\nPlayer In Alpha:\n"},{selector:"@s"},{"text":"\n"}]
