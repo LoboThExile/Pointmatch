@@ -47,7 +47,10 @@
 #                   POINTMATCH LOAD FUNCTION
 # ===============================================================
 
+schedule clear pointmatch:game/gamestart
+
 execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music
+execute as @a at @s run stopsound @a * pointmatch:pointmatch.weather.weathergirl
 
 # -----------------------------
 # Reset Shop Scores
@@ -77,7 +80,13 @@ scoreboard objectives remove PM_welcome_clear
 scoreboard objectives remove PM_ShopIndicator
 scoreboard objectives remove PM_MUTE
 scoreboard objectives remove PM_Ingame
+scoreboard objectives remove PM_GAMESTARTCOUNTDOWN
+scoreboard objectives remove PM_TEMP
+scoreboard objectives remove PM_Players
 
+scoreboard objectives add PM_Players dummy
+scoreboard objectives add PM_TEMP dummy
+scoreboard objectives add PM_GAMESTARTCOUNTDOWN dummy
 scoreboard objectives add PM_Ingame dummy
 scoreboard objectives add PM_MUTE dummy
 scoreboard objectives add PM_ShopIndicator dummy "Currently In Shop"
@@ -114,3 +123,14 @@ scoreboard objectives add PM_Weather dummy
 scoreboard players set #PrevWeather PM_Weather 0
 scoreboard players set #CurrWeather PM_Weather 0
 
+# -----------------------------
+# Count players
+# -----------------------------
+
+# Reset and set player count
+scoreboard players set $total PM_Players 0
+execute as @a run scoreboard players add $total PM_Players 1
+
+# Set boolean: 1 if >1 players, 0 otherwise
+scoreboard players set $multi PM_Players 0
+execute if score $total PM_Players matches 2.. run scoreboard players set $multi PM_Players 1
