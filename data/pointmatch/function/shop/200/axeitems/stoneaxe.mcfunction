@@ -7,10 +7,11 @@ execute unless score @s PM_Points matches 2.. run tellraw @s {"text":"Not enough
 execute unless score @s PM_Points matches 2.. run execute as @s at @s run playsound minecraft:block.note_block.bass
 execute unless score @s PM_Points matches 2.. run return fail
 
-execute as @s at @s run playsound minecraft:block.note_block.bell
 
+execute as @s at @s run playsound minecraft:block.note_block.bell
 # If we reach here, they can afford
 scoreboard players remove @s PM_Points 2
-give @s minecraft:stone_sword
-tellraw @s {"text":"You have purchased a Stone Sword for 2 Points!", "color":"green"}
+give @s minecraft:stone_axe
+tellraw @s {"text":"You have purchased a Stone Axe for 2 Points!", "color":"green"}
+
 trigger PM_Shop set 100

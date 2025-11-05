@@ -11,6 +11,7 @@ execute as @s at @s run playsound minecraft:block.note_block.bell
 
 # If we reach here, they can afford
 scoreboard players remove @s PM_Points 3
-give @s minecraft:iron_sword
-tellraw @s {"text":"You have purchased a Iron Sword for 3 Points!", "color":"green"}
+give @s minecraft:iron_axe
+tellraw @s {"text":"You have purchased an Iron Axe for 3 Points!", "color":"green"}
+
 trigger PM_Shop set 100

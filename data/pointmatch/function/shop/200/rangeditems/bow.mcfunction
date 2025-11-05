@@ -4,7 +4,10 @@ scoreboard players enable @s PM_Shop
 
 # Check if player can afford (has at least 1 point)
 execute unless score @s PM_Points matches 8.. run tellraw @s {"text":"Not enough points!", "color":"red"}
+execute unless score @s PM_Points matches 8.. run execute as @s at @s run playsound minecraft:block.note_block.bass
 execute unless score @s PM_Points matches 8.. run return fail
+
+execute as @s at @s run playsound minecraft:block.note_block.bell
 
 # If we reach here, they can afford
 scoreboard players remove @s PM_Points 8

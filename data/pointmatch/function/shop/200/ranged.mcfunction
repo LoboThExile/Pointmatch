@@ -2,9 +2,10 @@ scoreboard players set @s PM_Shop 0
 scoreboard players enable @s PM_Shop
 
 tellraw @s "\n\n\n\n\n\n\n\n\n\n"
-tellraw @s {"text":"-------------------------------",color:"gold"}
-tellraw @s {"text":"Headshot 223...","color":"gold"}
-tellraw @s {"text":"-------------------------------",color:"gold"}
+execute as @s at @s run playsound minecraft:block.note_block.bit
+tellraw @s {"text":"+===============================+",color:"gold"}
+tellraw @s {"text":"Headshot 223...","color":"gold",click_event:{action:"run_command",command:"execute as @s at @s run playsound pointmatch:pointmatch.shop.headshot223"}}
+tellraw @s {"text":"+===============================+",color:"gold"}
 tellraw @s ""
 tellraw @s {"text":"[ Ranged Weapons ]", bold:true,color:"red"}
 tellraw @s ""
