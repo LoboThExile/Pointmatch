@@ -45,6 +45,7 @@ execute as @a[scores={PM_Shop=401}] run function pointmatch:shop/400/miscitems/c
 execute as @a[scores={PM_Shop=402}] run function pointmatch:shop/400/miscitems/cobwebs
 execute as @a[scores={PM_Shop=403}] run function pointmatch:shop/400/miscitems/pickaxe
 
+# Other
 
 # Death Announcements
 execute as @a[scores={PM_Deaths=1..}, team=PM_Alpha] run tellraw @a [{"text":"Team Alpha Died..\nPlayer In Alpha:\n"},{selector:"@s"},{"text":"\n"}]

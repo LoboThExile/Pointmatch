@@ -3,3 +3,5 @@ tellraw @a {text:"+=============[ Points Warning ]=============+",color:gold}
 tellraw @a {"text":"[Warning] PointMatch: This datapack found old data for 'Points'.\nDo you want to keep it or replace it?",color:"yellow"}
 #tellraw @a ["",{"text":"[Keep]","color":"green","clickEvent":{"action":"suggest_command","value":"function pointmatch:points/keepoldpoints"}},{"text":" OR","color":"yellow"},{"text":" "},{"text":"[Replace]","color":"red","clickEvent":{"action":"suggest_command","value":"function pointmatch:points/replaceoldpoints"}}]
 tellraw @a [{"text":"[Keep]",color:"green",bold:true,hover_event:{action:"show_text",value:"This will keep all points data."},click_event:{action:"run_command",command:"function pointmatch:points/keepoldpoints"}},{text:" OR ",color:"yellow"},{text:"[Replace]",color:"red",click_event:{action:"run_command",command:"function pointmatch:points/replaceconfirmation"},bold:true,hover_event:{action:"show_text",value:{text:"This will delete all old 'Points' scoreboard data and create a new scoreboard."}}}]
+say [Pointmatch] This datapack will automaticly keep old data for points in 10s.
+schedule function pointmatch:points/keepoldpoints 10s
