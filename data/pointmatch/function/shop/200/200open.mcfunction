@@ -1,10 +1,10 @@
 scoreboard players set @s PM_Shop 0
 scoreboard players enable @s PM_Shop
-
+execute as @s at @s run execute as @s at @s run playsound minecraft:block.note_block.bit
 tellraw @s "\n\n\n\n\n\n\n\n\n\n"
-tellraw @s {"text":"-------------------------------",color:"gold"}
+tellraw @s {"text":"+===============================+",color:"gold"}
 tellraw @s {"text":"Oh.. Weapons..","color":"gold"}
-tellraw @s {"text":"-------------------------------",color:"gold"}
+tellraw @s {"text":"+===============================+",color:"gold"}
 tellraw @s ""
 tellraw @s {"text":"[ WEAPONS ]", bold:true,color:"red"}
 tellraw @s ""
