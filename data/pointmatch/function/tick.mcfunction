@@ -1,7 +1,7 @@
 scoreboard players enable @a PM_Shop
 
 # Shop Related
-execute as @a[scores={PM_Shop=10}] run function pointmatch:welcome_screen
+execute as @a[scores={PM_Shop=1..10}] run function pointmatch:welcome_screen
 execute as @a[scores={PM_Shop=100}] run function pointmatch:shop/open
 # Shop play sound
 execute as @a[scores={PM_Shop=-100}] run function pointmatch:shop/playshopmusic
