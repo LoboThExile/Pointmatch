@@ -2,10 +2,11 @@ scoreboard players set @s PM_Shop 0
 scoreboard players enable @s PM_Shop
 say Opening Shop...
 #execute as @s at @s run playsound pointmatch:pointmatch.shop.music ui @s
-playsound minecraft:block.note_block.bell
+execute as @s run playsound minecraft:block.note_block.bell
 
 tellraw @s "\n\n\n\n\n\n\n\n\n\n"
-tellraw @s "Music by nicopatty"
+#tellraw @s "Music by nicopatty"
+tellraw @s "Music credits in [ CREDITS ](Indev)"
 tellraw @s {"text":"+===============================+",color:"gold"}
 tellraw @s {"text":"Welcome to the shop. Buy anything you need.","color":"gold"}
 tellraw @s {"text":"+===============================+",color:"gold"}

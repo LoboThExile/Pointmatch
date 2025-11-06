@@ -49,8 +49,11 @@
 
 schedule clear pointmatch:game/gamestart
 
-execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music
 execute as @a at @s run stopsound @a * pointmatch:pointmatch.weather.weathergirl
+execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music
+execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music.hipshop
+execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music.untitledtaggame
+execute as @a at @s run stopsound @a * pointmatch:pointmatch.fight.music.red_folly
 
 # -----------------------------
 # Reset Shop Scores
@@ -83,7 +86,19 @@ scoreboard objectives remove PM_Ingame
 scoreboard objectives remove PM_GAMESTARTCOUNTDOWN
 scoreboard objectives remove PM_TEMP
 scoreboard objectives remove PM_Players
+scoreboard objectives remove PM_RandomMusic
+scoreboard objectives remove PM_isDead
+scoreboard objectives remove PM_PickTeam
+scoreboard objectives remove PM_AlphaIsTaken
+scoreboard objectives remove PM_BravoIsTaken
+scoreboard objectives remove PM_LastSecond
 
+scoreboard objectives add PM_LastSecond dummy
+scoreboard objectives add PM_AlphaIsTaken dummy
+scoreboard objectives add PM_BravoIsTaken dummy
+scoreboard objectives add PM_PickTeam trigger
+scoreboard objectives add PM_isDead dummy
+scoreboard objectives add PM_RandomMusic dummy
 scoreboard objectives add PM_Players dummy
 scoreboard objectives add PM_TEMP dummy
 scoreboard objectives add PM_GAMESTARTCOUNTDOWN dummy
