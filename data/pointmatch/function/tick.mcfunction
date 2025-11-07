@@ -1,6 +1,7 @@
 scoreboard players enable @a PM_Shop
+scoreboard players enable @a PM_PickTeam
 
-# Shop Related
+## Shop Related
 execute as @a[scores={PM_Shop=1..10}] run function pointmatch:welcome_screen
 execute as @a[scores={PM_Shop=100}] run function pointmatch:shop/open
 # Shop play sound
@@ -48,7 +49,19 @@ execute as @a[scores={PM_Shop=403}] run function pointmatch:shop/400/miscitems/p
 # Other
 
 # Death Announcements
-execute as @a[scores={PM_Deaths=1..}, team=PM_Alpha] run tellraw @a [{"text":"Team Alpha Died..\nPlayer In Alpha:\n"},{selector:"@s"},{"text":"\n"}]
+execute as @a[scores={PM_Deaths=1..}, team=PM_Alpha] run function pointmatch:game/death/alphadied
+execute as @a[scores={PM_Deaths=1..}, team=PM_Bravo] run function pointmatch:game/death/bravodied
+execute as @a[scores={PM_Deaths=1..}, team=!PM_Alpha, team=!PM_Bravo] run function pointmatch:game/death/playerdied
+
+## Team choosing
+
+execute as @a[scores={PM_PickTeam=1..50}] run function pointmatch:game/team/team_helper
+execute as @a[scores={PM_PickTeam=250}] run function pointmatch:game/team/choose_alpha
+execute as @a[scores={PM_PickTeam=500}] run function pointmatch:game/team/choose_bravo
+
+
+
+#execute as @a[scores={PM_Deaths=1..}, team=PM_Alpha] run tellraw @a [{"text":"Team Alpha Died..\nPlayer In Alpha:\n"},{selector:"@s"},{"text":"\n"}]
 
 #title @a actionbar "Run /trigger PM_Shop 10\n "
 
@@ -60,10 +73,22 @@ execute if predicate {condition:weather_check,raining:true} run scoreboard playe
 execute unless predicate {condition:weather_check,raining:true} run scoreboard players set #CurrWeather PM_Weather 0
 
 # Detect change from clear -> rain
-execute if score #CurrWeather PM_Weather matches 1 if score #PrevWeather PM_Weather matches 0 as @a at @s run playsound pointmatch:pointmatch.weather.weathergirl weather @s ~ ~ ~ 0.05
-
+execute if score #CurrWeather PM_Weather matches 1 if score #PrevWeather PM_Weather matches 0 as @a at @s run playsound pointmatch:pointmatch.weather.weathergirl weather @s ~ ~ ~ 0.1
 # Detect change from rain -> clear
 execute if score #CurrWeather PM_Weather matches 0 if score #PrevWeather PM_Weather matches 1 as @a at @s run stopsound @a * pointmatch:pointmatch.weather.weathergirl
 
 # Update previous
 scoreboard players operation #PrevWeather PM_Weather = #CurrWeather PM_Weather
+
+#
+# Death SFX
+#
+
+# Mark players who are dead
+execute as @a[nbt={Health:0f}] run scoreboard players set @s PM_isDead 1
+
+
+# Detect players who WERE dead but are now alive (respawn pressed)
+execute as @a[scores={PM_isDead=1..}, nbt=!{Health:0f}] run stopsound @a * pointmatch:pointmatch.death.determination
+execute as @a[scores={PM_isDead=1..}, nbt=!{Health:0f}] run scoreboard players set @s PM_isDead 0
+
