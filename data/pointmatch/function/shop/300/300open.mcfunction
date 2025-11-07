@@ -2,10 +2,11 @@ scoreboard players set @s PM_Shop 0
 scoreboard players enable @s PM_Shop
 
 tellraw @s "\n\n\n\n\n\n\n\n\n\n"
-execute as @s at @s run playsound minecraft:block.note_block.bit
-tellraw @s {"text":"-------------------------------",color:"gold"}
+execute as @s run playsound minecraft:block.note_block.bell
+tellraw @s {"text":"+===============================+",color:"gold"}
 tellraw @s {"text":"I have nothing to say except that this is in development...","color":"gold"}
-tellraw @s {"text":"-------------------------------",color:"gold"}
+tellraw @s {"text":"+===============================+",color:"gold"}
+
 tellraw @s ""
 tellraw @s {"text":"[ ARMOR ]", bold:true,color:"red"}
 tellraw @s ""
