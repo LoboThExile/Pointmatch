@@ -54,6 +54,7 @@ execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music
 execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music.hipshop
 execute as @a at @s run stopsound @a * pointmatch:pointmatch.shop.music.untitledtaggame
 execute as @a at @s run stopsound @a * pointmatch:pointmatch.fight.music.red_folly
+execute as @a at @s run stopsound @a * pointmatch:pointmatch.fight.music.decisive_battle
 
 # -----------------------------
 # Reset Shop Scores
@@ -92,11 +93,15 @@ scoreboard objectives remove PM_PickTeam
 scoreboard objectives remove PM_AlphaIsTaken
 scoreboard objectives remove PM_BravoIsTaken
 scoreboard objectives remove PM_LastSecond
+scoreboard objectives remove PM_GameRound
+scoreboard objectives remove PM_Game3rdRound
+scoreboard objectives remove PM_CreditsPage
 
+scoreboard objectives add PM_Game3rdRound dummy
+scoreboard objectives add PM_GameRound dummy
 scoreboard objectives add PM_LastSecond dummy
 scoreboard objectives add PM_AlphaIsTaken dummy
 scoreboard objectives add PM_BravoIsTaken dummy
-scoreboard objectives add PM_PickTeam trigger
 scoreboard objectives add PM_isDead dummy
 scoreboard objectives add PM_RandomMusic dummy
 scoreboard objectives add PM_Players dummy
@@ -112,6 +117,8 @@ tellraw @a [{"text":" Scores have been reset.","color":"green"}]
 tellraw @a [{"text":" Adding more scoreboards...","color":"aqua"}]
 scoreboard objectives add PM_Deaths deathCount
 scoreboard objectives add PM_Shop trigger
+scoreboard objectives add PM_PickTeam trigger
+scoreboard objectives add PM_CreditsPage trigger
 scoreboard players enable @a PM_Shop
 tellraw @a [{"text":" Scoreboards have been added.","color":"green"}]
 

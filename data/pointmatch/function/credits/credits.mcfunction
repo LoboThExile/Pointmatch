@@ -1,0 +1,16 @@
+tellraw @s [{text:"+====[Credits]====+",color:gold}]
+tellraw @s [{text:"----Datapack-Creators----", color:yellow}]
+tellraw @s [{text:"[LoboThExile]",hover_event:{action:"show_text",value:{"text":"The sole Developer of this project!",color:"aqua"}},color:green},{text:" - Coded this project.",color:"gray"}]
+tellraw @s [{text:"[N1NJ4ZW0LF]",hover_event:{action:"show_text",value:{"text":"The sole idea contributor!",color:"aqua"}},color:green},{text:" - Idea contributor.",color:"gray"}]
+tellraw @s [{text:"----Songs (Shop)----", color:yellow}]
+tellraw @s [{text:"[USER]",hover_event:{action:"show_text",value:{"text":"[ADD WHERE IT WAS USED IN.]",color:"aqua"}},color:green},{text:" - [SONG]",color:"gray"}]
+tellraw @s [{text:"[Toby Fox]",hover_event:{action:"show_text",value:{"text":"Used in: Shop",color:"aqua"}},color:green,click_event:{action:"open_url",url:"https://www.youtube.com/watch?v=D83BxptHcRc"}},{text:" - [Hip Shop]",color:"gray"}]
+tellraw @s [{text:"[nicopatty]",hover_event:{action:"show_text",value:{"text":"Used in: Shop",color:"aqua"}},color:green,click_event:{action:"open_url",url:"https://www.youtube.com/watch?v=zNHC_efucwo"}},{text:" - [nico's nextbots ost vol.2 - shop]",color:"gray"}]
+tellraw @s [{text:"[nicopatty]",hover_event:{action:"show_text",value:{"text":"Used in: Shop",color:"aqua"}},color:green,click_event:{action:"open_url",url:"https://www.youtube.com/watch?v=ENWFOepUlFw"}},{text:" - [untitled tag game ost - cha-ching!!]",color:"gray"}]
+# tellraw @s [{text:"----Songs (Other)----", color:yellow}]
+# tellraw @s [{text:"[Toby Fox]",hover_event:{action:"show_text",value:{"text":"Used in: Death",color:"aqua"}},color:green,click_event:{action:"open_url",url:"https://www.youtube.com/watch?v=h1wSPmlZV-w"}},{text:" - [Determination]",color:"gray"}]
+# tellraw @s [{text:"[AZALI]",hover_event:{action:"show_text",value:{"text":"Used in: Battle",color:"aqua"}},color:green,click_event:{action:"open_url",url:"https://www.youtube.com/watch?v=ILh0zEfqSQM"}},{text:" - [DECISIVE BATTLE]",color:"gray"}]
+# tellraw @s [{text:"----Songs (Unused)----", color:yellow}]
+tellraw @s [{text:"More ->>         ",color:green},{text:"[>]",bold:true,color:red,hover_event:{action:"show_text",value:"Go to the next page"},click_event:{action:"run_command",command:"trigger PM_CreditsPage set 1"}}]
+
+

@@ -92,3 +92,4 @@ execute as @a[nbt={Health:0f}] run scoreboard players set @s PM_isDead 1
 execute as @a[scores={PM_isDead=1..}, nbt=!{Health:0f}] run stopsound @a * pointmatch:pointmatch.death.determination
 execute as @a[scores={PM_isDead=1..}, nbt=!{Health:0f}] run scoreboard players set @s PM_isDead 0
 
+function pointmatch:credits_tick

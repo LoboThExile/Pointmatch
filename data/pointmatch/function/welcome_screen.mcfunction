@@ -19,7 +19,7 @@ tellraw @a ["",{"text":"\n\n\n\n\n\n\n\n"}]
 tellraw @a [{"text":"=================================","color":"gold"}]
 tellraw @a [{"text":"     ✦ Welcome to PointMatch ✦","color":"yellow","bold":true}]
 tellraw @a [{"text":"=================================","color":"gold"}]
-tellraw @a [{"text":"Created by ","color":"gray"},{"text":"LoboThExile","color":"aqua",click_event:{action:"open_url",url:"https://github.com/LoboThExile"},hover_event:{action:"show_text",value:"Open LoboThExile's Github"},bold:true},{"text":" | Idea by ","color":"gray"},{"text":"Kirby","color":"light_purple",click_event:{action:"open_url",url:"https://hijjaz.straw.page/"},hover_event:{action:"show_text",value:"Open Kirby's Strawpage"},bold:true}]
+tellraw @a [{"text":"Created by ","color":"gray"},{"text":"LoboThExile","color":"aqua",click_event:{action:"open_url",url:"https://github.com/LoboThExile"},hover_event:{action:"show_text",value:"Open LoboThExile's Github"},bold:true},{"text":" | Idea by ","color":"gray"},{"text":"N1NJ4ZW0LF","color":"light_purple",click_event:{action:"open_url",url:"https://hijjaz.straw.page/"},hover_event:{action:"show_text",value:"Open Kirby's Strawpage"},bold:true}]
 tellraw @a ""
 tellraw @a [{"text":"This datapack creates a ","color":"white"},{"text":"1v1 gamemode","color":"gold","bold":true},{"text":",\nwhere players earn points by defeating each other!","color":"white"}]
 tellraw @a ""
