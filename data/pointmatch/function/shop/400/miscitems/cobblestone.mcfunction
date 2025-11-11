@@ -11,7 +11,7 @@ execute as @s at @s run playsound minecraft:block.note_block.bell
 
 # If we reach here, they can afford
 scoreboard players remove @s PM_Points 2
-give @s minecraft:cobblestone
+give @s minecraft:cobblestone 32
 tellraw @s {"text":"You have purchased a 32 cobblestone for 2 Points!", "color":"green"}
 
 trigger PM_Shop set 100
