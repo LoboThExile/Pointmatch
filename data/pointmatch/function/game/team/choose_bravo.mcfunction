@@ -22,3 +22,4 @@ team join PM_Bravo @s
 scoreboard players set #game PM_BravoIsTaken 1
 
 tellraw @a "choose_bravo.mcfunction ran!"
+execute as @s run scoreboard players set @s PM_PickTeam 1

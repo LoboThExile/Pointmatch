@@ -22,3 +22,4 @@ team join PM_Alpha @s
 scoreboard players set #game PM_AlphaIsTaken 1
 
 tellraw @a "choose_alpha.mcfunction ran!"
+execute as @s run scoreboard players set @s PM_PickTeam 1
