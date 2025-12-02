@@ -1,4 +1,4 @@
-
+tellraw @a "\n\n\n\n\n"
 execute as @s run scoreboard players set @s PM_PickTeam 0
 tellraw @a [{text:"+==================+",bold:true,color:gold}]
 tellraw @a [{text:"Choose a team...",bold:true,color:gold}]

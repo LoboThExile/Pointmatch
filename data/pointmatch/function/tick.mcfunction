@@ -2,7 +2,7 @@ scoreboard players enable @a PM_Shop
 scoreboard players enable @a PM_PickTeam
 
 ## Shop Related
-execute as @a[scores={PM_Shop=1..10}] run function pointmatch:welcome_screen
+execute as @a[scores={PM_Shop=1..10}] run function pointmatch:welcome_screen_client
 execute as @a[scores={PM_Shop=100}] run function pointmatch:shop/open
 # Shop play sound
 execute as @a[scores={PM_Shop=-100}] run function pointmatch:shop/playshopmusic
@@ -24,6 +24,7 @@ execute as @a[scores={PM_Shop=232}] run function pointmatch:shop/200/axeitems/st
 execute as @a[scores={PM_Shop=233}] run function pointmatch:shop/200/axeitems/ironaxe
 execute as @a[scores={PM_Shop=234}] run function pointmatch:shop/200/axeitems/diamondaxe
 
+# Ranged shop [250]
 execute as @a[scores={PM_Shop=250}] run function pointmatch:shop/200/ranged
 # Purchase Ranged Items [25#]
 execute as @a[scores={PM_Shop=251}] run function pointmatch:shop/200/rangeditems/bow
@@ -93,3 +94,10 @@ execute as @a[scores={PM_isDead=1..}, nbt=!{Health:0f}] run stopsound @a * point
 execute as @a[scores={PM_isDead=1..}, nbt=!{Health:0f}] run scoreboard players set @s PM_isDead 0
 
 function pointmatch:credits_tick
+
+# Detect players whose leave_game stat increased (they just rejoined)
+execute as @a[scores={PM_leave_game=1..}] run function pointmatch:player_join
+
+execute if score #game PM_Ingame matches 4 run scoreboard players set #game PM_Ingame 1
+
+title @a actionbar [{"text":"Alpha Wins: "},{"score":{"name":"#Alpha","objective":"PM_Wins"}},{"text":" | ","bold":true},{"text":"Bravo Wins: "},{"score":{"name":"#Bravo","objective":"PM_Wins"}}]

@@ -1,7 +1,7 @@
-tellraw @a "BEGIN!! (game not implemented. Will end game in 5 seconds..."
+#tellraw @a "BEGIN!! (game not implemented. Will end game in 5 seconds...)"
 scoreboard players add #game PM_GameRound 1
 say pointmatch:game/ingame.mcfunction ran!
-schedule function pointmatch:game/exitgame 5s
+#schedule function pointmatch:game/exitgame 5s
 
 ## Error capturing
 execute if score #game PM_Game3rdRound matches 0 run tellraw @a [{text:"WARNING: Score 'PM_Game3rdRound' for '#game' got was 0. Did you skip a step? Attempting to fix..."}]

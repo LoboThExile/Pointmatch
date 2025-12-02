@@ -96,7 +96,13 @@ scoreboard objectives remove PM_LastSecond
 scoreboard objectives remove PM_GameRound
 scoreboard objectives remove PM_Game3rdRound
 scoreboard objectives remove PM_CreditsPage
+scoreboard objectives remove PM_leave_game
+# scoreboard objectives remove PM_Bravo_Wins
+scoreboard objectives remove PM_Wins
 
+scoreboard objectives add PM_Wins dummy "Wins"
+# scoreboard objectives add PM_Bravo_Wins dummy "Bravo Wns"
+scoreboard objectives add PM_leave_game minecraft.custom:minecraft.leave_game
 scoreboard objectives add PM_Game3rdRound dummy
 scoreboard objectives add PM_GameRound dummy
 scoreboard objectives add PM_LastSecond dummy
