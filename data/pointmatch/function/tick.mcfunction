@@ -100,4 +100,7 @@ execute as @a[scores={PM_leave_game=1..}] run function pointmatch:player_join
 
 execute if score #game PM_Ingame matches 4 run scoreboard players set #game PM_Ingame 1
 
-title @a actionbar [{"text":"Alpha Wins: "},{"score":{"name":"#Alpha","objective":"PM_Wins"}},{"text":" | ","bold":true},{"text":"Bravo Wins: "},{"score":{"name":"#Bravo","objective":"PM_Wins"}}]
+#title @a actionbar [{"text":"Alpha Wins: "},{"score":{"name":"#Alpha","objective":"PM_Wins"}},{"text":" | ","bold":true},{"text":"Bravo Wins: "},{"score":{"name":"#Bravo","objective":"PM_Wins"}}]
+
+execute if score #Bravo PM_Wins matches 9.. run function pointmatch:game/victory/bravovictory
+execute if score #Alpha PM_Wins matches 9.. run function pointmatch:game/victory/alphavictory

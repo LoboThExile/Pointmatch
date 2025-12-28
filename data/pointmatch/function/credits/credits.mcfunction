@@ -4,7 +4,7 @@ tellraw @s {"text":"[ Go back ]",click_event:{action:"run_command",command:"trig
 tellraw @s [{text:"+====[Credits]====+",color:gold,bold:true}]
 tellraw @s [{text:"----Datapack-Creators----", color:yellow}]
 tellraw @s [{bold:true,text:"[N1NJ4ZW0LF]",hover_event:{action:"show_text",value:{"text":"Without him, this project wouldn't exist!","color":"aqua"}},color:green},{text:" - Idea originator. Full credit goes to him.",color:"gray"}]
-tellraw @s [{bold:false,text:"[LoboThExile]",hover_event:{action:"show_text",value:{"text":"The sole developer of this project.\nCoded the entire project and polished descriptions.","color":"aqua"}},color:green},{text:" - Coded the entire project.",color:"gray"},{text:" (Datapack Dev)",bold:true,color:gray}]
+tellraw @s [{bold:false,text:"[LoboThExile]",hover_event:{action:"show_text",value:{"text":"Made this datapack with ❤","color":"aqua"}},color:green},{text:" - Made this datapack with ❤",color:"gray"},{text:" (Datapack Dev)",bold:true,color:gray}]
 tellraw @s [{text:"----Songs (Shop)----", color:yellow}]
 #tellraw @s [{text:"[USER]",hover_event:{action:"show_text",value:{"text":"[ADD WHERE IT WAS USED IN.]",color:"aqua"}},color:green},{text:" - [SONG]",color:"gray"}]
 tellraw @s [{text:"[Toby Fox]",hover_event:{action:"show_text",value:{"text":"Used in: Shop",color:"aqua"}},color:green,click_event:{action:"open_url",url:"https://www.youtube.com/watch?v=D83BxptHcRc"}},{text:" - [Hip Shop]",color:"gray"}]

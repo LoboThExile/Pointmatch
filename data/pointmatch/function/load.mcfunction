@@ -162,3 +162,5 @@ execute as @a run scoreboard players add $total PM_Players 1
 # Set boolean: 1 if >1 players, 0 otherwise
 scoreboard players set $multi PM_Players 0
 execute if score $total PM_Players matches 2.. run scoreboard players set $multi PM_Players 1
+
+tellraw @a "Made with ❤ by LoboThExile" 

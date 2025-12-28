@@ -33,15 +33,15 @@ execute if score #game PM_GameRound matches 3 run function pointmatch:game/3rdro
 
 tellraw @a [{text:"Game ended"}]
 
-execute if score #game PM_GameRound matches 2 run title @a actionbar {"text":"Giver Round!","color":"gold"}
+# execute if score #game PM_GameRound matches 2 run title @a actionbar {"text":"Giver Round!","color":"gold"}
 
-execute if score #game PM_GameRound matches 2 run tellraw @a {"text":"+=======[","color":"dark_gray","extra":[{"text":"Giver Rounds!","color":"aqua"},{"text":"]=======+","color":"dark_gray"}]}
+# execute if score #game PM_GameRound matches 2 run tellraw @a {"text":"+=======[","color":"dark_gray","extra":[{"text":"Giver Rounds!","color":"aqua"},{"text":"]=======+","color":"dark_gray"}]}
 
-execute if score #game PM_GameRound matches 2 run tellraw @a [{"text":"Every three rounds, a ","color":"yellow"},{"text":"Giver Round","color":"gold"},{"text":" starts. Instead of buying items for yourself, you spend points to give items to your enemies.","color":"white"}]
+# execute if score #game PM_GameRound matches 2 run tellraw @a [{"text":"Every three rounds, a ","color":"yellow"},{"text":"Giver Round","color":"gold"},{"text":" starts. Instead of buying items for yourself, you spend points to give items to your enemies.","color":"white"}]
 
-execute if score #game PM_GameRound matches 2 run tellraw @a [{"text":"The twist: ","color":"yellow"},{"text":"every point you spend on an opponent is multiplied by the Giver Rate","color":"light_purple"},{"text":" and added back to your own points. This lets you help yourself by ","color":"white"},{"text":"“helping”","color":"gray"},{"text":" your enemy.","color":"white"}]
+# execute if score #game PM_GameRound matches 2 run tellraw @a [{"text":"The twist: ","color":"yellow"},{"text":"every point you spend on an opponent is multiplied by the Giver Rate","color":"light_purple"},{"text":" and added back to your own points. This lets you help yourself by ","color":"white"},{"text":"“helping”","color":"gray"},{"text":" your enemy.","color":"white"}]
 
-execute if score #game PM_GameRound matches 2 run tellraw @a {"text":"+=======[","color":"dark_gray","extra":[{"text":"Giver Rounds!","color":"aqua"},{"text":"]=======+","color":"dark_gray"}]}
+# execute if score #game PM_GameRound matches 2 run tellraw @a {"text":"+=======[","color":"dark_gray","extra":[{"text":"Giver Rounds!","color":"aqua"},{"text":"]=======+","color":"dark_gray"}]}
 
 
 execute as @a at @s run stopsound @a * pointmatch:pointmatch.fight.music.red_folly
